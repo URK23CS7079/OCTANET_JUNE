@@ -1,0 +1,81 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background image and some basic styles for the body */
+body {
+    background-image: url('https://get.pxhere.com/photo/interior-fashion-business-clothing-room-interior-design-boutique-inside-design-lobby-clothes-dresses-dress-shop-women\'s-1133206.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Container for the main content to center it and add padding */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ff69b4;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+.main-content section {
+    margin-bottom: 20px;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff69b4;
+}
+
+.main-content p, .main-content ul {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* List styles */
+.services ul {
+    list-style-type: none;
+}
+
+.services li {
+    margin-bottom: 5px;
+}
