@@ -3,51 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dremon Dress Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Horizon Car Dealership</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script defer src="script.ts"></script>
 </head>
 <body>
-    <div class="overlay"></div>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Dremon</a>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#collection">Our Collection</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.OoFQ7Jnc_H771C43h5D4-QHaD4?rs=1&pid=ImgDetMain" alt="Horizon Car Dealership Logo">
         </div>
-    </nav>
-    <header class="header">
-        <div class="container">
-            <h1>Welcome to Dremon</h1>
-            <p>Your dream dress awaits</p>
-            <a href="#collection" class="cta-button">Explore Collection</a>
-        </div>
-    </header>
-    <main class="main-content container">
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>At Dremon, we believe every woman deserves to feel beautiful. We offer a wide range of dresses for every occasion.</p>
-        </section>
-        <section id="collection" class="collection">
-            <h2>Our Collection</h2>
+        <nav>
             <ul>
-                <li>Evening Gowns</li>
-                <li>Cocktail Dresses</li>
-                <li>Casual Dresses</li>
-                <li>Bridal Dresses</li>
-                <li>Prom Dresses</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-        <section id="contact" class="contact">
+        </nav>
+        <div class="hamburger-menu">&#9776;</div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/4K-Backgrounds-1-scaled.jpg');">
+        <div class="container">
+            <h1>Welcome to Horizon Car Dealership</h1>
+            <p>Discover our wide range of new and used cars.</p>
+            <a href="#inventory" class="btn">View Inventory</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Horizon Car Dealership, where we are passionate about cars and committed to providing exceptional service.</p>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="inventory">
+        <div class="container">
+            <h2>Our Inventory</h2>
+            <div class="car-grid">
+                <div class="car-card">
+                    <img src="https://th.bing.com/th/id/R.de90b3245c1aaf9a2c6ff0eb2401a41c?rik=FbNwj7sycBjlmw&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2fmercedes_amg_gt_r_2018_4k_5-HD.jpg&ehk=On8mVHexZmYNGcTAzD8FrZhdwpxQUroXTySFU3%2bvq04%3d&risl=1&pid=ImgRaw&r=0" alt="Mercedes AMG GTR">
+                    <h3>Mercedes AMG GTR</h3>
+                    <p>Description of Mercedes AMG GTR</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+                <div class="car-card">
+                    <img src="https://performancedrive.com.au/wp-content/uploads/2016/03/Aston-Martin-DB11-LEDs.jpg" alt="Aston Martin DB11">
+                    <h3>Aston Martin DB11</h3>
+                    <p>Description of Aston Martin DB11</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+                <div class="car-card">
+                    <img src="https://pixelz.cc/wp-content/uploads/2019/01/porsche-911-carrera-uhd-4k-wallpaper.jpg" alt="Porsche 911 Carrera">
+                    <h3>Porsche 911 Carrera</h3>
+                    <p>Description of Porsche 911 Carrera</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+                <div class="car-card">
+                    <img src="https://th.bing.com/th/id/R.e6638060e1fc8fd2e0fd7da6504434b5?rik=vhVzjxLpYzdvHg&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2f2018_bmw_m4_gt4_4k_3-HD.jpg&ehk=Ep2l71Yr7i1%2bylwBM%2b%2fzfBHfgUj%2f962RTo8mz0M29JU%3d&risl=1&pid=ImgRaw&r=0" alt="2018 BMW M4 GT4">
+                    <h3>2018 BMW M4 GT4</h3>
+                    <p>Description of 2018 BMW M4 GT4</p>
+                    <a href="#" class="btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Great service and a wide range of cars! Highly recommend Horizon Car Dealership!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing experience! I found the car I wanted and the process was so smooth."</p>
+                <p>- Jane Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is the return policy?</h3>
+                <p>Our return policy allows for returns within 30 days of purchase. Please contact us for more details.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer financing options?</h3>
+                <p>Yes, we offer a variety of financing options to suit your needs. Please speak with our finance team for more information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Contact Us</h2>
-            <p>Email: contact@dremon.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2024 Dremon Dress Shop. All rights reserved.</p>
-    </footer>
+            <form action="#" id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Horizon Car Dealership. All rights reserved.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
