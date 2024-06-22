@@ -1,149 +1,379 @@
-/* Reset some default browser styles */
-body, h1, h2, p, ul {
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Set the background image and some basic styles for the body */
 body {
     font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
     color: #333;
-    background-image: url('https://get.pxhere.com/photo/interior-fashion-business-clothing-room-interior-design-boutique-inside-design-lobby-clothes-dresses-dress-shop-women\'s-1133206.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-/* Overlay to darken the background image for better text visibility */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-/* Container for the main content to center it and add padding */
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    position: relative;
-    z-index: 1;
-    color: #fff;
 }
 
-/* Navigation bar styles */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.navbar .container {
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ff69b4;
+.logo img {
+    height: 40px; /* Adjust as needed */
 }
 
-.navbar .nav-links {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar .nav-links a {
-    color: #fff;
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
 }
 
-.navbar .nav-links a:hover {
-    background-color: #ff69b4;
-    color: #000;
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-/* Header styles */
-.header {
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: #fff;
     text-align: center;
-    padding: 150px 20px 50px;
 }
 
-.header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 1.5em;
+.hero h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out; /* Add fade in animation */
 }
 
-.header .cta-button {
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out; /* Add fade in animation */
+}
+
+.hero .btn {
+    background-color: #007bff;
+    color: #ffffff;
     padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #ff69b4;
-    color: #fff;
+    border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Inventory Section */
+/* Inventory Section */
+.inventory {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.inventory .car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.inventory .car-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.inventory .car-card:hover {
+    transform: scale(1.05);
+}
+
+.inventory .car-card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.inventory .car-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.inventory .car-card p {
+    padding: 0 10px;
+}
+
+.inventory .car-card .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
     border-radius: 5px;
 }
 
-.header .cta-button:hover {
-    background-color: #ff1493;
+
+.car-card .btn:hover {
+    background-color: #0056b3;
 }
 
-/* Main content styles */
-.main-content {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 30px;
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.main-content section {
+.car-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
     margin-bottom: 20px;
 }
 
-.main-content h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #ff69b4;
+/* FAQ Section */
+.faq {
+    background-color: #f9f9f9;
+    padding: 80px 0;
 }
 
-.main-content p, .main-content ul {
-    font-size: 1em;
+.faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
     line-height: 1.5;
 }
 
-.main-content ul {
-    list-style-type: none;
+/* Contact Section */
+.contact {
+    background-color: #ffffff;
+    padding: 80px 0;
 }
 
-.main-content li {
-    margin-bottom: 5px;
-}
-
-/* Footer styles */
-.footer {
+.contact h2 {
     text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin-top: 20px;
-    color: #ff69b4;
-    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.contact .btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social {
+    margin-top: 10px;
+}
+
+footer .social a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation items */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu icon */
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about,
+    .inventory,
+    .contact {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 15px;
+    }
+
+    .car-card {
+        padding: 15px;
+    }
+
+    .car-card h3 {
+        font-size: 1rem;
+    }
+
+    .car-card p {
+        font-size: 0.9rem;
+    }
 }
